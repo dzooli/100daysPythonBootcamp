@@ -154,4 +154,5 @@ pyvenv.cfg
 pip-selfcheck.json
 
 .idea/
+.gh_token
 
