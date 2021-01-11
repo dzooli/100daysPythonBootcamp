@@ -29,3 +29,11 @@ if x >= 40 and x <= 50:
 ```python
 if 40 <= x <= 50:
 ```
+
+# Loops
+
+## Password generator
+
+Good passwords contains numbers, uppercase and lowercase letters 
+(and probably extra characters like '!#_' or something like this). 
+By the end of the day 5 we will create a strong password generator.
