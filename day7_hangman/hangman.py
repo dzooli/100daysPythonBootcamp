@@ -1,13 +1,7 @@
 import random
+import hangman_stages
 
-"""
-Desc: 
- Function to convert List of strings to a string with a separator
-"""
-def converttostr(input_seq, seperator):
-   final_str = seperator.join(input_seq)
-   return final_str
-
+max_lives = 6
 word_list = ["baboon", "camel", "chimera", "leopard",
              "jaguar", "lion", "tiger", "monkey",
              "adwaark", "penguin"]
@@ -16,7 +10,6 @@ game_over = False
 player_wins = False
 chosen_word = random.choice(word_list)
 placeholder = [ '_' for x in range(0, len(chosen_word))]
-print(chosen_word)
 
 lives = 6
 while not game_over:
@@ -38,6 +31,8 @@ while not game_over:
         print(''.join(placeholder))
         if '_' not in placeholder:
             player_wins = True
+    # refresh the UI
+    print(hangman_stages.stages[lives])
     # check if the player wins or no more lives
     if player_wins:
         game_over = True
