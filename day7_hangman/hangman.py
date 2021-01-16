@@ -13,9 +13,7 @@ placeholder = [ '_' for x in range(0, len(chosen_word))]
 
 lives = 6
 while not game_over:
-    # read a new guess
     guess = input("Enter your guess character:\n").lower()
-    # check and update the placeholder
     i = 0
     found_char = False
     for curr_char in chosen_word:
@@ -23,7 +21,6 @@ while not game_over:
             placeholder[i] = guess
             found_char = True
         i += 1
-    # decrease lives of check the remaining placeholders
     if not found_char:
         lives -= 1
         print(F"You have lost a life :( Remains {lives}")
@@ -31,9 +28,7 @@ while not game_over:
         print(''.join(placeholder))
         if '_' not in placeholder:
             player_wins = True
-    # refresh the UI
     print(hangman_stages.stages[lives])
-    # check if the player wins or no more lives
     if player_wins:
         game_over = True
         print("Congratulations!! You are the winner!")
