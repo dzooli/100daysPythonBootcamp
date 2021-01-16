@@ -1,14 +1,12 @@
 import random
 import hangman_stages
+import hangman_words
 
 max_lives = 6
-word_list = ["baboon", "camel", "chimera", "leopard",
-             "jaguar", "lion", "tiger", "monkey",
-             "adwaark", "penguin"]
 
 game_over = False
 player_wins = False
-chosen_word = random.choice(word_list)
+chosen_word = random.choice(hangman_words.word_list)
 placeholder = [ '_' for x in range(0, len(chosen_word))]
 
 lives = 6
