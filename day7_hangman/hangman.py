@@ -7,7 +7,7 @@ max_lives = 6
 game_over = False
 player_wins = False
 chosen_word = random.choice(hangman_words.word_list)
-placeholder = [ '_' for x in range(0, len(chosen_word))]
+placeholder = ['_' for x in range(0, len(chosen_word))]
 
 lives = 6
 while not game_over:
