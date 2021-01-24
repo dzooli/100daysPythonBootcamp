@@ -10,13 +10,14 @@ def caesar(msg, direction, shift):
     else:
         return "Invalid direction"
 
+
 alphabet = [chr(x) for x in range(65, 91)]
 
-direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
+act_direction = input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
 text = input("Type your message:\n").upper()
-shift = int(input("Type the shift number:\n"))
+act_shift = int(input("Type the shift number:\n"))
 
-print(caesar(text, direction, shift))
+print(caesar(text, act_direction, act_shift))
 
 
 
